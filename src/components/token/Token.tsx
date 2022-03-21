@@ -12,10 +12,10 @@ interface IToken {
 }
 
 const TOKEN_IMAGE = {
-  [TOKEN_TYPE.BEFORE_2]: <ChevronRightIcon className="text-black" />,
-  [TOKEN_TYPE.AFTER_1]: <ChevronDoubleRightIcon className="text-black" />,
-  [TOKEN_TYPE.AFTER_2]: <ChevronTripleRightIcon className="text-black" />,
-  [TOKEN_TYPE.AFTER_3]: <ChevronQuadrupleRightIcon className="text-black" />,
+  [TOKEN_TYPE.BEFORE_2]: <ChevronRightIcon className="text-white" />,
+  [TOKEN_TYPE.AFTER_1]: <ChevronDoubleRightIcon className="text-white" />,
+  [TOKEN_TYPE.AFTER_2]: <ChevronTripleRightIcon className="text-white" />,
+  [TOKEN_TYPE.AFTER_3]: <ChevronQuadrupleRightIcon className="text-white" />,
   [TOKEN_TYPE.FIRST]: <div>1</div>,
   [TOKEN_TYPE.SECOND]: <div>2</div>,
   [TOKEN_TYPE.THIRD]: <div>3</div>,
@@ -25,5 +25,9 @@ const TOKEN_IMAGE = {
 };
 
 export const Token: React.VFC<IToken> = ({ tokenType }) => {
-  return <div className="w-8 h-8 text-black ">{TOKEN_IMAGE[tokenType]}</div>;
+  return (
+    <div className="w-8 h-8 rounded-md bg-black  text-white ">
+      {TOKEN_IMAGE[tokenType]}
+    </div>
+  );
 };
